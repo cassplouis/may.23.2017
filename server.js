@@ -1,3 +1,6 @@
+
+
+//espress instances
 var express = require("express"), 
 	bodyParser = require("body-parser"), 
 	mongoose = require("mongoose"),
@@ -52,6 +55,7 @@ app.get("/data", apiTokenCheck, function(req, res){
 	});
 });
 
+//"post": posting information to the server. 
 app.post("/login", function(req, res){
 	User.findOne({"username": req.body.username}, function(err, user){
 		if(err){
